@@ -9,12 +9,29 @@ namespace FavoriteThings
 
         //properties
         public string Title { get; set; }
-        public Genre Color { get; set; }
+        public Genres Genre { get; set; }
+
+        public Games(string title, Genres genre)
+        {
+            Title = title;
+            Genre = genre;
+        }
+
+        public void Start()
+        {
+            Console.WriteLine($"{Title} started up, it is a {Genre}");
+            Console.ReadLine();
+        }
+
+        public void Play()
+        {
+            Console.WriteLine("Played the game");
+        }
 
 
     }
 
-    enum Genre
+    enum Genres
     {
         RPG,
         FPS,

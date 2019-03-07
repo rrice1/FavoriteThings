@@ -6,7 +6,9 @@ namespace FavoriteThings
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var halo = new Games("Halo", Genres.FPS);
+            halo.Start();
+
         }
     }
 }
